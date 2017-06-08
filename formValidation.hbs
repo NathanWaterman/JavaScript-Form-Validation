@@ -1,0 +1,213 @@
+{{> header }}
+
+<main class="body-control">
+  <div class="container">
+    <div class="formOne-container">
+      <div class="col-sm-12">
+        <h1>Identity Confirmation</h1></div>
+      <article class="--progress-bar">
+        <div class="row">
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+        </div>
+      </article>
+
+
+      <form id="identityForm" class="identityForm" action="#" method="post" autocomplete="off">
+        <div class="form-section">
+          <div class="basic-info-container">
+            <h2>Basic Information</h2>
+            <div class="row">
+              <label class="col-sm-3 firstName-container" for="firstname">
+                <span class="col-sm-12">First Name</span>
+                <input id="firstname" name="firstname" type="text" class="" autocomplete="off" required="">
+              </label>
+              <label class="col-sm-3 lastName-container" for="lastname">
+                <span class="col-sm-12">Last Name</span>
+                <input id="lastname" name="lastname" type="text" class="" autocomplete="off" required="">
+              </label>
+            </div>
+            <div class="row">
+              <div class='col-sm-2 datepick-container'>
+                <span class="col-xs-12 title">Date of Birth</span>
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker'>
+                    <input id="selectedDate" type='text' maxlength="10" class="form-control date-form" placeholder="mm/dd3/yyyy" required="">
+                    <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3 ss-container" for="SS">
+                <span class="col-xs-12">Social Security Number (optional)</span>
+                <input id="SS" name="SS" type="text" class="" autocomplete="off" placeholder="000-00-0000">
+              </label>
+            </div>
+          </div>
+          <div class="residential-info-container">
+            <h2>Residential Information</h2>
+            <div class="row">
+              <label class="col-sm-4 street-address-container" for="address">
+                <span class="col-sm-12">Street Address - Street address or P.O. Box</span>
+                <input id="address" name="address" type="text" autocomplete="off" required="">
+                <!-- <span class="col-sm-12 address-sub-selection">Street address or P.O. Box</span> -->
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 address-optional" for="addressOptional">
+                <span class="col-sm-12">Street Address 2 (optional) - Apartment, suite, unit, building, floor, etc.</span>
+                <input id="addressOptional" name="addressOptional" type="text" class="" autocomplete="off">
+                <!-- <span class="col-sm-12">Apartment, suite, unit, building, floor, etc.</span> -->
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-3 city-container" for="city">
+                <span class="col-sm-12">City</span>
+                <input id="city" name="city" type="text" class="" autocomplete="off" required="">
+              </label>
+
+              <label class="--select col-sm-2" for="state">
+                <span class="col-sm-12">&nbsp;</span>
+                <span class="--select-select fa">
+                      <select class="--select-select-el" name="state" id="state" required="">
+                        <option value="" disabled selected>State</option>
+                          <option value="-">-</option>
+                          <option value="pa">Pennsylvania</option>
+                          <option value="new york">New York</option>
+                          <option value="florida">Florida</option>
+                      </select>
+                    </span>
+              </label>
+              <label class="col-sm-2" for="zipcode">
+                <span class="col-sm-12">Zip Code</span>
+                <input id="zipcode" name="zipcode" type="text" maxlength="5" autocomplete="off" required="">
+              </label>
+            </div>
+            <div class="row agree-check">
+              <div class="col-sm-12">
+                <h2>In order to proceed with this request, the above information is required.</h2>
+                <p>You understand that by clicking on the I AGREE button immediately following this notice, you are providing “written instructions” to the State of - under the Fair Credit Reporting Act authorizing the State of - to obtain information
+                  from your personal credit profile or other information from Experian. You authorize the State of - to obtain such information solely to confirm your identity to avoid fraudulent transactions in your name prior to granting you online
+                  access and to use the State of - web site.</p>
+                <input name="agree" type="checkbox" data-parsley-checkmin="1" required /> I Agree
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-section questionaire">
+          <h2>Please select appropriate responses for the following questions:</h2>
+          <div class="row questions">
+            <div class="row">
+              <div class="col-sm-6">You may have opened a mortgage loan in or around August 2013. Please select the dollar amount range in which your monthly mortgage payment falls. Refer only to the regular monthly payment which includes principal, interest, and escrow (escrow
+                could include taxes and insurance if collected by lender). IF you have not had a mortgage payment now or in the past, please select “None of the above/does not apply.”</div>
+            </div>
+            <div class="row">
+              <label class="radio-inline">
+                <input type="radio" name="optradio1" required="">$4530–$4829
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio1" required="">$4830–$5129
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio1" required="">$5130–$5429
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio1" required="">$5430–$5729
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio1" required="">None of the above/does not apply.
+              </label>
+            </div>
+          </div>
+          <div class="row questions">
+            <div class="row">
+              <div class="col-sm-6">Which of the following professions do you currently or have previously belonged to? If there is not a matched profession, please select “None of the above.”</div>
+            </div>
+            <div class="row">
+              <label class="radio-inline">
+                <input type="radio" name="optradio2" required="">Barber / Cosmetologist / Manicurist / Nail
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio2" required="">Doctor / Physician / Surgeon
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio2" required="">Farming / Agriculture
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio2" required="">Architect
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio2" required="">None of the above.
+              </label>
+            </div>
+          </div>
+          <div class="row questions">
+            <div class="row">
+              <div class="col-sm-6">Which of the following is the highest level of education you have completed? If there is not a matched educational level, please select “None of the above.”</div>
+            </div>
+            <div class="row">
+              <label class="radio-inline">
+                <input type="radio" name="optradio3" required="">High School Diploma
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio3" required="">Some College
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio3" required="">Bachelor Degree
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio3" required="">Graduate Degree
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio3" required="">None of the above.
+              </label>
+            </div>
+          </div>
+          <div class="row questions">
+            <div class="row">
+              <div class="col-sm-6">Please select the model year of the vehicle you purchased or leased prior to March 2013. If there is not a matched year or you did not purchase or lease a vehicle prior to March 2013, please select “None of the above/does not apply.”</div>
+            </div>
+            <div class="row">
+              <label class="radio-inline">
+                <input type="radio" name="optradio4" required="">1995
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio4" required="">1996
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio4" required="">1997
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio4" required="">1998
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio4" required="">None of the above/does not apply.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 footnote">
+          <p>Note: Date of Birth and Social Security Number will not be saved.</p>
+        </div>
+        <div class="col-sm-6 form-navigation-container">
+          <div class="form-navigation">
+            <button type="button" class="previous btn btn-info pull-left">&lt; Previous</button>
+            <button type="button" class="next btn btn-info pull-right">Next &gt;</button>
+            <input type="submit" value="Submit Confirmation" class="btn form-submit btn-default pull-right">
+            <span class="clearfix"></span>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+</main>
+
+{{> footer }}
